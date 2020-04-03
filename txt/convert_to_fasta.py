@@ -1,6 +1,6 @@
 import os
 
-def main():
+def txtToFasta():
     for file in os.listdir('txt'):
          filename = os.fsdecode(file)
 
@@ -16,4 +16,4 @@ def main():
              continue
 
 if __name__ == "__main__":
-    main()
+    txtToFasta()

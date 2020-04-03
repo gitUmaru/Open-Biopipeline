@@ -4,7 +4,7 @@ import os
 
 fasta_file = []
 
-def main():
+def blast():
     for file in os.listdir('fasta'):
          filename = os.fsdecode(file)
          if filename.endswith(".fasta"):
@@ -23,4 +23,4 @@ def main():
     result_handle.close()
 
 if __name__ == '__main__':
-    main()
+    blast()

@@ -59,9 +59,9 @@ env\scripts\activate
 
 
 ## Results
-Refer to gene_items.md for sequence gene id and accession Number
+Refer to gene_items.md for sequence gene id and Accession Number.
 
-Further insight is currently being developed
+Further insight is currently being developed.
 
 ## Pipeline flow
 Under construction

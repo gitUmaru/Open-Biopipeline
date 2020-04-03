@@ -34,7 +34,11 @@ def log_error(e):
     print(e)
 
 
-raw_html = simple_get('https://www.ncbi.nlm.nih.gov/nuccore/AH002844.2')
-html = BeautifulSoup(raw_html, 'html.parser')
-for i in html.find_all('div', attrs={}):
-        print(i)
+def scrape():
+    raw_html = simple_get('https://www.ncbi.nlm.nih.gov/nuccore/AH002844.2')
+    html = BeautifulSoup(raw_html, 'html.parser')
+    for i in html.find_all('div', attrs={}):
+            print(i)
+
+if __name__ = '__main__':
+    scrape()

@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 from Bio import Entrez
 
 
-def main():
+def parse():
     root = ET.parse('my_blast.xml').getroot()
 
     print(root[8][0][1].text)
@@ -17,4 +17,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    parse()
