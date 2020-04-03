@@ -14,7 +14,7 @@
 
 
 2. Gene Accession Number
-  * insert
+  * NG_009018
 
 
 ### Gene C -- DNA nucleotide sequence:
@@ -30,7 +30,7 @@
 
 
 2. Gene Accession Number
-  * insert
+  * NG_005905.2
 
 ### Gene E -- DNA nucleotide sequence:
 1. Gene ID (gi)
