@@ -16,7 +16,7 @@ Please note this is not the full pipeline, just simply the blastn search portion
 
 ## Installation
 ### Windows and MacOS
-Go to NCBI website [here](ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) and download the installer. Install as you would any .exe program
+Go to NCBI website [here](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) and download the installer. Install as you would any .exe program
 
 ### Linux dependencies
 ```
