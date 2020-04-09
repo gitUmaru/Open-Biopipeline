@@ -64,7 +64,11 @@ Refer to gene_items.md for sequence gene id and Accession Number.
 Further insight is currently being developed.
 
 ## Pipeline flow
-Under construction
+<p align="center">
+  <img src="https://i.imgur.com/UWcFXx1.png">
+</p>
+
+<p align="center"><b>Figure 1.</b> Flow chart diagram of bioinformatic pipeline, displaying flow of input/outputs</p>
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
