@@ -46,15 +46,16 @@ BLAST commands should work now, the following command should return an output ot
 blastn -version
 ```
 
-### Python dependencies
+### Python Setup
 ```
 pip install virtualenv
-
-pip install biopython
 
 virtualenv bio_pipeline
 
 env\scripts\activate
+
+pip install -r requirements.txt
+
 ```
 
 

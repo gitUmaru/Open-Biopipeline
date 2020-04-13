@@ -69,5 +69,6 @@
 2. Gene Accession Number
   * 	CP034495.1
 
+
 3. Gene name
   * ERBB2

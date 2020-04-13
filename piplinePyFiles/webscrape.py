@@ -34,11 +34,15 @@ def log_error(e):
     print(e)
 
 
-def scrape():
-    raw_html = simple_get('https://www.ncbi.nlm.nih.gov/nuccore/AH002844.2')
+def scrape(url,element):
+    items = []
+    raw_html = simple_get(url)
     html = BeautifulSoup(raw_html, 'html.parser')
-    for i in html.find_all('div', attrs={}):
-            print(i)
+    for a in html.find_all(element, attrs={}):
+        #print(a)
+        items.append(a)
+    return items
 
-if __name__ = '__main__':
-    scrape()
+if __name__ == '__main__':
+    gene_name = 'NF1'
+    items = scrape('https://www.uniprot.org/uniprot/?query='+gene_name+'+AND+organism%3A%22Homo+sapiens+%28Human%29+%5B9606%5D%22&sort=score','a')

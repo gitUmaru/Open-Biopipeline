@@ -1,0 +1,4 @@
+biopython
+uniprot
+requests
+beautifulsoup4
