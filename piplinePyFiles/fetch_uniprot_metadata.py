@@ -1,4 +1,4 @@
-from webscrape import *
+from webscrape import scrape
 
 def protein_entry(gene_name):
     genes = []
