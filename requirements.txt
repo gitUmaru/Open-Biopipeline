@@ -1,4 +1,5 @@
 biopython
 uniprot
 requests
+matplotlib
 beautifulsoup4

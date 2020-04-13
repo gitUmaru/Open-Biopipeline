@@ -60,16 +60,25 @@ pip install -r requirements.txt
 
 
 ## Results
-Refer to gene_items.md for sequence gene id and Accession Number.
+Starting with an unknown sequence of nucleotides the program is fed into the BLAST algorithm to pairwise match the nucleotides for a specific gene. Refer to [gene_items.md](gene_items.md) for the gene name and accession number of the example genes given. 
 
-Further insight is currently being developed.
+The next step is to understand the gene/protein function by using the UniProt database. By inputting a gene name, we can look for the specific amino acid sequence AND the protein function. You can see here that we don't use KEGG in our analysis since functional annotation is not only partially given by UniProt, but one can retrieve GO information from UniProt links.
+
+Next, we preform pathway analysis on the targeted gene so one can identify the cellular response of the specific cell cascade. This helps us gain understanding of the upstream and downstream molecules; moreover, this can aid in therapeutic drug research. Refer to figure 1 for the pathway interactions of vascular endothelial growth factor A (VEGFA) gene.
+
+<p align="center">
+  <img width="500" height="400" src="pathway_img/VEGFA_pathway.jpg">
+</p>
+<p align="center"><b>Figure 1.</b> Cell signaling cascade of the VEGFA protein (Note the specific link to angiogeneis, making it a target for cancer research)</p>
+
+Biological insight is currently being developed.
 
 ## Pipeline flow
 <p align="center">
   <img src="https://i.imgur.com/UWcFXx1.png">
 </p>
 
-<p align="center"><b>Figure 1.</b> Flow chart diagram of bioinformatic pipeline, displaying flow of input/outputs</p>
+<p align="center"><b>Figure 2.</b> Flow chart diagram of bioinformatic pipeline, displaying flow of input/outputs</p>
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
