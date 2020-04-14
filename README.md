@@ -1,4 +1,4 @@
-# Unknown Nucleotide Sequence BioPipeline
+# Open Biopipeline
 This project was inspired by my intro to biomedical engineering lab course. This fully automates and streamlines the process of analyzing unknown sequence data. You can view the python notebook below to see a working version. Parts of this pipeline is left out as to prevent future students from cheating.
 
 ## Demo
