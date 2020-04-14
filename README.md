@@ -71,7 +71,15 @@ Next, we preform pathway analysis on the targeted gene so one can identify the c
 </p>
 <p align="center"><b>Figure 1.</b> Cell signaling cascade of the VEGFA protein (Note the specific link to angiogenesis, making it a target for cancer research)</p>
 
-Lastly, we pass through the gene name into Protein Atlas which gives us valuable and relevant information on the protein expression in patients. This proves very desirable since one can now look at specific RNA cancer expression or the description of the protein within the clinical context. Below is an exmaple of the Protein Atlas output:
+Lastly, we pass through the gene name into Protein Atlas which gives us valuable and relevant information on the protein expression in patients. This proves very desirable since one can now look at specific RNA cancer expression or the description of the protein within the clinical context. Below is an example of the Protein Atlas output:
+```
+0 Protein Name: VEGFA
+  Tissue expression summary:  Most cancers showed strong cytoplasmic immunoreactivity. Lymphomas were in general moderately stained.
+  Description:  Antibody staining mainly consistent with RNA expression data. At least one protein variant secreted, tissue location of RNA and protein might differ and correlation is complex.  
+  RNA Cancer Specificity: Low cancer specificity
+
+...
+```
 
 ## Pipeline flow
 <p align="center">
