@@ -89,7 +89,7 @@ Lastly, we pass through the gene name into Protein Atlas which gives us valuable
 <p align="center"><b>Figure 2.</b> Flow chart diagram of bioinformatic pipeline, displaying flow of input/outputs</p>
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an is?sue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
