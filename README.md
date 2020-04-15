@@ -1,4 +1,4 @@
-# Unknown Nucleotide Sequence BioPipeline
+# Open Biopipeline
 This project was inspired by my intro to biomedical engineering lab course. This fully automates and streamlines the process of analyzing unknown sequence data. You can view the python notebook below to see a working version. Parts of this pipeline is left out as to prevent future students from cheating.
 
 ## Demo
@@ -62,7 +62,7 @@ pip install -r requirements.txt
 ## Results
 Starting with an unknown sequence of nucleotides the program is fed into the BLAST algorithm to pairwise match the nucleotides for a specific gene. Refer to [gene_items.md](gene_items.md) for the gene name and accession number of the example genes given.
 
-The next step is to understand the gene/protein function by using the UniProt database. By inputting a gene name, we can look for the specific amino acid sequence AND the protein function. You can see here that we don't use KEGG in our analysis since functional annotation is not only partially given by UniProt, but one can retrieve GO information from UniProt links.
+The next step is to understand the gene/protein function by using the UniProt database. By inputting a gene name, we can look for the specific amino acid sequence AND the protein function. You can see here that we don't use gene ontologogy (GO) directly in our analysis since functional annotation is not only partially given by UniProt, but one can retrieve GO information from UniProt links.
 
 Next, we preform pathway analysis on the targeted gene so one can identify the cellular response of the specific cell cascade. This helps us gain understanding of the upstream and downstream molecules; moreover, this can aid in therapeutic drug research. Refer to figure 1 for the pathway interactions of vascular endothelial growth factor A (VEGFA) gene.
 
@@ -89,7 +89,7 @@ Lastly, we pass through the gene name into Protein Atlas which gives us valuable
 <p align="center"><b>Figure 2.</b> Flow chart diagram of bioinformatic pipeline, displaying flow of input/outputs</p>
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an is?sue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
