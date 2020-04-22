@@ -1,5 +1,5 @@
 # Open Biopipeline
-This project was inspired by my intro to biomedical engineering lab course. This fully automates and streamlines the process of analyzing unknown sequence data. You can view the python notebook below to see a working version. Parts of this pipeline is left out as to prevent future students from cheating.
+This project was inspired by my intro to biomedical engineering lab course. This fully automates and streamlines the process of analyzing unknown sequence data. You can view the python notebook below to see a working version.
 
 ## Demo
 [Python Notebook](https://colab.research.google.com/drive/1lRdys_SpBH4HugSSRcW8S678T-r7NYXV)
