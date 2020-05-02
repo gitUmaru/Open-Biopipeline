@@ -52,7 +52,7 @@ pip install virtualenv
 
 virtualenv bio_pipeline
 
-env\scripts\activate
+bio_pipeline\Scripts\activate
 
 pip install -r requirements.txt
 
