@@ -1,4 +1,4 @@
-# Open Biopipeline
+<img width="auto" height="auto" src ="https://i.imgur.com/yUFCu2Y.png"><br><br>
 This project was inspired by my intro to biomedical engineering lab course. This fully automates and streamlines the process of analyzing unknown sequence data. You can view the python notebook below to see a working version.
 
 ## Demo
