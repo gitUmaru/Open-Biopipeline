@@ -1,18 +1,16 @@
 Metadata-Version: 2.1
 Name: open-biopipeline
-Version: 0.0.1
+Version: 0.0.2
 Summary: Welcome to Open Biopipeline, an open source gene exploration tool!
 Home-page: https://github.com/gitUmaru/Open-Biopipeline
 Author: Muhammad Umar Ali
 Author-email: umaruali@student.ubc.ca
 License: UNKNOWN
 Description: <img width="auto" height="auto" src ="https://i.imgur.com/yUFCu2Y.png"><br><br>
+        
+        Open Biopipeline is an open source bioinformatics tool for general and broad purposes, specifically the goal of this project is to develop a tool for researchers or students to use in order to investigate genes. This tool combines several popular existing bioinformatic tools, such as BLAST, KEGG, GO, and Protein Atlas, by consolidating them into one singular location. By using this tool you are able to retrieve: function gene annotation, protein function, clinical relevance, specific patient case information, and much more.
+        
         This project was inspired by my intro to biomedical engineering lab course. This fully automates and streamlines the process of analyzing unknown sequence data. You can view the python notebook below to see a working version.
-        
-        ## Demo
-        [Python Notebook](https://colab.research.google.com/drive/1lRdys_SpBH4HugSSRcW8S678T-r7NYXV)
-        
-        Please note this is not the full pipeline, just simply the blastn search portion.
         
         ## Packages
         - Biopython
@@ -27,7 +25,7 @@ Description: <img width="auto" height="auto" src ="https://i.imgur.com/yUFCu2Y.p
         Go to NCBI website [here](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) and download the installer. Install as you would any .exe program
         
         ### Linux dependencies
-        ```
+        ```bash
         uname -i
         sudo apt-get install lftp
         lftp -e "cd blast/executables/LATEST; dir; quit" ftp.ncbi.nlm.nih.gov | awk '{print $NF}'
@@ -40,7 +38,7 @@ Description: <img width="auto" height="auto" src ="https://i.imgur.com/yUFCu2Y.p
         
         cd ncbi-blast-2.10.0+
         ```
-        ```
+        ```bash
         # so you can run the bin commands without specifying directory
         export PATH = $PATH:$PWD
         
@@ -50,46 +48,23 @@ Description: <img width="auto" height="auto" src ="https://i.imgur.com/yUFCu2Y.p
         ```
         BLAST commands should work now, the following command should return an output other than "Unknown command".
         
-        ```
+        ```bash
         blastn -version
         ```
         
         ### Python Setup
-        ```
+        ```bash
         pip install virtualenv
         
         virtualenv bio_pipeline
         
         bio_pipeline\Scripts\activate
         
-        pip install -r requirements.txt
+        pip install open-biopipeline
         
         ```
         
-        
-        ## Results
-        Starting with an unknown sequence of nucleotides the program is fed into the BLAST algorithm to pairwise match the nucleotides for a specific gene. Refer to [gene_items.md](gene_items.md) for the gene name and accession number of the example genes given.
-        
-        The next step is to understand the gene/protein function by using the UniProt database. By inputting a gene name, we can look for the specific amino acid sequence AND the protein function. You can see here that we don't use gene ontologogy (GO) directly in our analysis since functional annotation is not only partially given by UniProt, but one can retrieve GO information from UniProt links.
-        
-        Next, we preform pathway analysis on the targeted gene so one can identify the cellular response of the specific cell cascade. This helps us gain understanding of the upstream and downstream molecules; moreover, this can aid in therapeutic drug research. Refer to figure 1 for the pathway interactions of vascular endothelial growth factor A (VEGFA) gene.
-        
-        <p align="center">
-          <img width="500" height="400" src="pathway_img/VEGFA_pathway.jpg">
-        </p>
-        <p align="center"><b>Figure 1.</b> Cell signaling cascade of the VEGFA protein (Note the specific link to angiogenesis, making it a target for cancer research)</p>
-        
-        Lastly, we pass through the gene name into Protein Atlas which gives us valuable and relevant information on the protein expression in patients. This proves very desirable since one can now look at specific RNA cancer expression or the description of the protein within the clinical context. Below is an example of the Protein Atlas output:
-        ```
-        0 Protein Name: VEGFA
-          Tissue expression summary:  Most cancers showed strong cytoplasmic immunoreactivity. Lymphomas were in general moderately stained.
-          Description:  Antibody staining mainly consistent with RNA expression data. At least one protein variant secreted, tissue location of RNA and protein might differ and correlation is complex.  
-          RNA Cancer Specificity: Low cancer specificity
-        
-        ...
-        ```
-        
-        ## Pipeline flow
+        ## Example Pipeline Flow Chart
         <p align="center">
           <img src="https://i.imgur.com/UWcFXx1.png">
         </p>

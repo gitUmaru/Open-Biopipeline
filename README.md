@@ -17,7 +17,7 @@ This project was inspired by my intro to biomedical engineering lab course. This
 Go to NCBI website [here](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) and download the installer. Install as you would any .exe program
 
 ### Linux dependencies
-```
+```bash
 uname -i
 sudo apt-get install lftp
 lftp -e "cd blast/executables/LATEST; dir; quit" ftp.ncbi.nlm.nih.gov | awk '{print $NF}'
@@ -30,7 +30,7 @@ rm ncbi-blast-2.10.0+-x64-linux.tar.gz
 
 cd ncbi-blast-2.10.0+
 ```
-```
+```bash
 # so you can run the bin commands without specifying directory
 export PATH = $PATH:$PWD
 
@@ -40,12 +40,12 @@ export PATH = $PATH:$HOME/content/ncbi-blast-2.10.0+/bin
 ```
 BLAST commands should work now, the following command should return an output other than "Unknown command".
 
-```
+```bash
 blastn -version
 ```
 
 ### Python Setup
-```
+```bash
 pip install virtualenv
 
 virtualenv bio_pipeline
