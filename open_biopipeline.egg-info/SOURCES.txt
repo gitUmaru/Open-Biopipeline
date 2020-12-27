@@ -1,0 +1,6 @@
+README.md
+setup.py
+open_biopipeline.egg-info/PKG-INFO
+open_biopipeline.egg-info/SOURCES.txt
+open_biopipeline.egg-info/dependency_links.txt
+open_biopipeline.egg-info/top_level.txt

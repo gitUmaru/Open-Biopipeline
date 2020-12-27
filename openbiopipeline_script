@@ -1,0 +1,4 @@
+#!/user/bin/env python
+
+echo "Welcome to Open Biopipeline, an open source gene exploration tool!"
+chmod +x openbiopipeline
