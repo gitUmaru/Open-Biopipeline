@@ -2,7 +2,13 @@
 /ncbi-blast-2.10.0+
 ncbi-blast-2.10.0+-x64-linux.tar.gz
 dist/
+__pycache__/
 open_biopipeline.egg-info/
+src/*.egg-info
+*.egg-info
 .git/*
 build/
+bin/
 openbiopipeline_script
+*.pyc
+*.pyo
