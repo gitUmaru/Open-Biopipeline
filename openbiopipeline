@@ -2,3 +2,4 @@
 
 echo "Welcome to Open Biopipeline, an open source gene exploration tool!"
 chmod +x openbiopipeline
+pip install -r requirements.txt
