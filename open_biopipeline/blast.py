@@ -2,12 +2,24 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.Blast import NCBIWWW
 import os
+
 from util.sample_data.seq import SampleData
 
 class PathError(Exception):
-    pass
+    '''Exception raised for errors in path.
+
+    Attributes:
+        expression -- input expression in which the error occurred
+        message -- explanation of the error
+    '''
+    def __init__(self,expression,message):
+        self._expression = expression
+        self._message = message
 
 class BLAST():
+    '''
+    TODO: Add class and method documentation
+    '''
     def __init__(self,raw_string=None,path=None):
         self.__path = path
         if(path is not None):
@@ -24,7 +36,7 @@ class BLAST():
             blast_result.close()
             result_handle.close()
         else:
-            PathError("The path is None, please provide a file path")
+            PathError(self.__path,"The path is None, please provide a file path")
 
     def get_seq(self,seq_string=None):
         if(self.__raw_string is not None):
