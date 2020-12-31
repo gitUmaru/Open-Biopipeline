@@ -16,9 +16,9 @@ class PathError(Exception):
         self._expression = expression
         self._message = message
 
-class BLAST():
+class Blast():
     '''
-    TODO: Add class and method documentation
+    TODO: Add class and method documentation (and methods?)
     '''
     def __init__(self,raw_string=None,path=None):
         self.__path = path
@@ -31,7 +31,7 @@ class BLAST():
             record = SeqIO.read(self.__path, format=self.__file_ext.replace(".",""))
             result_handle = NCBIWWW.qblast(search_type, seq_type, record.seq)
 
-            blast_result = open(os.path.dirname(__file__)+self.__filename.replace("\\","_")+".xml", "w")
+            blast_result = open(self.__filename.replace("\\","_")+".xml", "w")
             blast_result.write(result_handle.read())
             blast_result.close()
             result_handle.close()

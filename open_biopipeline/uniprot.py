@@ -1,32 +1,42 @@
 from webscrape import scrape
+import urllib.parse
+import urllib.request
 
-def protein_entry(gene_name):
-    genes = []
-    genes_entry = []
-    items = scrape('https://www.uniprot.org/uniprot/?query="'+gene_name+'+human"+AND+organism%3A%22Homo+sapiens+%28Human%29+%5B9606%5D%22&sort=score','a')
-
-    for i in range(len(items)):
-
-        if '<a href="/uniprot/?query=' in str(items[i]):
-            items[i] = "NULL"
-
-        if '<a href="/uniprot/' in str(items[i]):
-            genes.append(str(items[i]))
-
-    for i in range(len(genes)):
-        genes_entry.append(genes[i][26:32])
-
-    return genes_entry, genes
-
-def protein_function(gene_entry):
-    items = scrape('https://www.uniprot.org/uniprot/'+gene_entry,'span')
-    return str(items[46])[22:str(items[46]).find('<span class="attribution')]
+class Uniprot():
+    '''
+    TODO: Add class and method documentation
+    '''
+    def __init__(self,gene_name=None,gene_entry=None,organism="HUMAN"):
+        self.__gene_entry = gene_entry
+        self.__gene_name = gene_name
+        self.__organism = organism
 
 
-def protein_AASeq(gene_entry):
-    items = scrape('https://www.uniprot.org/uniprot/'+gene_entry,'span')
-    return items[29].string
+    def protein_entries(self):
+        data = urllib.parse.urlencode({
+            'from': 'GENENAME',
+            'to': 'ID',
+            'format': 'list',
+            'query': self.__gene_name,
+            }).encode('utf-8')
+
+        req = urllib.request.Request('https://www.uniprot.org/uploadlists/', data)
+        with urllib.request.urlopen(req) as f:
+           response = f.read()
+        return [r for r in response.decode('utf-8').split() if self.__organism in r]
+
+    def protein_function(self):
+        '''TODO: Override this webscrape with uniprot API support'''
+        items = scrape('https://www.uniprot.org/uniprot/'+self.__gene_entry,'span')
+        return str(items[46])[22:str(items[46]).find('<span class="attribution')]
+
+
+    def protein_AASeq(self):
+        '''TODO: Override this webscrape with uniprot API support'''
+        items = scrape('https://www.uniprot.org/uniprot/'+self.__gene_entry,'span')
+        return items[29].string
 
 
 if __name__ == '__main__':
-    pass
+    up = Uniprot('VEGFA')
+    print(up.protein_entries())
